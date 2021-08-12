@@ -1,2 +1,2 @@
 # thehardwayc
-I read the book "Learn C the hardway" and save code from there here
+I read the book "Learn C the hardway". I do exercises from the book and use git to save all code I've done.
