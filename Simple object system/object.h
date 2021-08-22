@@ -3,7 +3,7 @@
 
 typedef enum{
 	NORTH, SOUTH, EAST, WEST
-} Directions;
+} Direction;
 
 typedef struct {
 	char *description;
@@ -11,7 +11,7 @@ typedef struct {
 	void (*describe)(void *self);
 	void (*destroy)(void *self);
 	void *(*move)(void *self, Direction direction);
-	int (*attack)(void) *self, int damage);
+	int (*attack)(void *self, int damage);
 } Object;
 
 int Object_init(void *self);

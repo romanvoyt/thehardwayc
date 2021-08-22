@@ -13,7 +13,7 @@ void Object_destroy(void *self){
 }
 
 void Object_describe(void *self){
-	object *obj = self;
+	Object *obj = self;
 	printf("%s. \n", obj->description);
 }
 
@@ -21,7 +21,7 @@ int Object_init(void *self){
 	return 1;
 }
 
-void *Object_move(void *self, Direction direction){
+void *Object_move(void *self, Directions direction){
 	printf("You can't go that direction. \n");
 	return NULL;
 }
@@ -32,7 +32,7 @@ int Object_attack(void *self, int damage)
 	return 0;
 }
 
-void *Object_new(size_t size, Object proto, char *desctiption)
+void *Object_new(size_t size, Object proto, char *description)
 {
 	//setup default functions in case they are not set
 	if(!proto.init) proto.init = Object_init;
@@ -50,7 +50,7 @@ void *Object_new(size_t size, Object proto, char *desctiption)
 	
 	if(!el->init(el)) {
 		el->destroy(el);
-		return null;
+		return NULL;
 	} else {
 		return el;
 	}
