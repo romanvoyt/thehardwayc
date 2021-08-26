@@ -1,4 +1,6 @@
 CFLAGS=-Wall -g
 
+all: ex18
+
 clean:
-	rm -f ex19
+	rm -f ex18
